@@ -1,0 +1,45 @@
+Sistema de Gestão de Funcionários
+Descrição do Projeto
+Este projeto é um sistema de banco de dados para gerenciar funcionários, departamentos e salários em uma empresa. Ele permite o registro, atualização e consulta de informações de funcionários, bem como a gestão dos departamentos e dos salários. O objetivo é implementar operações básicas de CRUD (Create, Read, Update, Delete) e garantir a integridade referencial entre as tabelas.
+
+Funcionalidades
+- Gerenciamento de Funcionários: Registre, atualize e exclua funcionários, incluindo informações sobre nome, cargo, salário e departamento.
+- Gerenciamento de Departamentos: Registre, atualize e exclua departamentos, mantendo o relacionamento com os funcionários.
+- Gerenciamento de Salários: Armazene e consulte o histórico salarial de cada funcionário.
+Consultas: Realize consultas complexas para listar funcionários com seus departamentos, calcular o salário total por departamento e verificar o histórico salarial de um funcionário específico.
+Estrutura do Banco de Dados
+
+Tabela Departamentos:
+id_departamento (INT, PRIMARY KEY, AUTO_INCREMENT)
+nome (VARCHAR(50), NOT NULL)
+
+Tabela Funcionários:
+id_funcionario (INT, PRIMARY KEY, AUTO_INCREMENT)
+nome (VARCHAR(100), NOT NULL)
+cargo (VARCHAR(50), NOT NULL)
+salario (DECIMAL(10, 2), NOT NULL)
+id_departamento (INT, FOREIGN KEY, REFERENCES Departamentos(id_departamento))
+
+Tabela Salários:
+id_salario (INT, PRIMARY KEY, AUTO_INCREMENT)
+id_funcionario (INT, FOREIGN KEY, REFERENCES Funcionarios(id_funcionario))
+data (DATE, NOT NULL)
+valor (DECIMAL(10, 2), NOT NULL)
+
+Comandos Utilizados
+- CREATE DATABASE
+- CREATE TABLE
+- INSERT
+- SELECT
+- UPDATE
+- DELETE
+- JOIN
+
+Como Executar o Projeto
+1. Clone este repositório.
+2. Importe o script SQL fornecido para o seu banco de dados MySQL.
+3. Execute as consultas e operações descritas para testar as funcionalidades do sistema.
+
+Requisitos
+- MySQL 5.7 ou superior
+- Ferramenta de gerenciamento de banco de dados (MySQL Workbench, phpMyAdmin, etc.)
