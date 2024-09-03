@@ -1,0 +1,19 @@
+# Ignorar arquivos e pastas gerados automaticamente
+*.log
+*.bak
+*.tmp
+*.swp
+
+# Ignorar configurações de IDE
+.idea/
+.vscode/
+
+# Ignorar arquivos de banco de dados
+*.sql~
+*.sql.bak
+
+istema de Gestão de Funcionários
+
+Descrição: Este repositório contém o código SQL para um sistema de gerenciamento de funcionários em uma empresa. O sistema permite registrar, atualizar e excluir funcionários, departamentos e salários, além de realizar consultas complexas utilizando JOINs. O objetivo é demonstrar o uso de operações CRUD e garantir a integridade referencial entre as tabelas. O banco de dados foi desenvolvido em MySQL e inclui exemplos de inserção e manipulação de dados.
+
+Instruções: Clone o repositório, importe o script SQL para o seu banco de dados MySQL, e utilize as consultas fornecidas para testar as funcionalidades.
